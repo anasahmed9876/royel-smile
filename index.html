@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رويال سمايل لطب الأسنان</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="مركز رويال سمايل لطب وتجميل الأسنان: تجميل، زراعة، تقويم، علاج جذور وأسنان أطفال.">
+<link rel="icon" href="assets/images/mark-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ 1. الهيدر ============ -->
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home">
+      <img class="logo-light" src="assets/images/mark-light.png" alt="" width="30" height="40">
+      <img class="logo-dark" src="assets/images/mark-dark.png" alt="" width="30" height="40">
+      <span class="brand-text">
+        <b data-i18n="clinic.short">رويال سمايل</b>
+        <small>ROYAL SMILE</small>
+      </span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="القائمة">
+      <a href="#home" data-i18n="nav.home">الرئيسية</a>
+      <a href="#about" data-i18n="nav.about">احنا مين</a>
+      <a href="#services" data-i18n="nav.services">الخدمات</a>
+      <a href="#results" data-i18n="nav.results">قبل وبعد</a>
+      <a href="#doctors" data-i18n="nav.doctors">الدكاترة</a>
+      <a href="#faq" data-i18n="nav.faq">أسئلة شائعة</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل معنا</a>
+    </nav>
+
+    <div class="nav-tools">
+      <button class="icon-btn" id="langBtn" type="button" aria-label="Change language"><span class="latin">EN</span></button>
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="الوضع الداكن">
+        <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-gold btn-sm hide-sm" href="#book" data-i18n="cta.book">احجز ميعاد</a>
+      <button class="icon-btn burger" id="burger" type="button" aria-label="القائمة" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 2. الصفحة الرئيسية (سلايدر) ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker latin">ROYAL SMILE DENTAL CLINIC</p>
+      <div class="slides" id="heroSlides" aria-live="polite"></div>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#book">
+          <span data-i18n="cta.bookNow">احجز كشفك دلوقتي</span>
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-line" href="#services" data-i18n="cta.services">شوف خدماتنا</a>
+      </div>
+      <div class="slider-ctrl">
+        <button class="round-btn" id="heroPrev" type="button" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="dots" id="heroDots" role="tablist"></div>
+        <button class="round-btn" id="heroNext" type="button" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="crest">
+        <img class="logo-light" src="assets/images/logo-light.png" alt="لوجو رويال سمايل" width="323" height="520">
+        <img class="logo-dark" src="assets/images/logo-dark.png" alt="لوجو رويال سمايل" width="323" height="520">
+      </div>
+      <div class="status-card" id="statusCard">
+        <span class="dot-live"></span>
+        <div><b id="openStatus"></b><small id="openHours"></small></div>
+      </div>
+      <div class="float-card" id="heroIconCard" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. الأرقام ============ -->
+<section class="stats-band" aria-label="أرقام">
+  <div class="wrap stats" id="stats"></div>
+</section>
+
+<!-- ============ 4. احنا مين ============ -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <div class="about-panel">
+        <img class="logo-light" src="assets/images/logo-light.png" alt="" width="323" height="520">
+        <img class="logo-dark" src="assets/images/logo-dark.png" alt="" width="323" height="520">
+      </div>
+      <div class="about-badge"><b id="aboutYears">10+</b><span data-i18n="about.badge">سنين بنرسم ابتسامات</span></div>
+    </div>
+    <div class="about-copy reveal">
+      <p class="eyebrow" data-i18n="nav.about">احنا مين</p>
+      <h2 id="aboutTitle"></h2>
+      <div id="aboutText" class="about-text"></div>
+      <ul class="checks" id="aboutBullets"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. ليه تختارنا ============ -->
+<section class="section alt" id="why">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="why.eyebrow">ليه تختارنا</p>
+      <h2 data-i18n="why.title">ست أسباب تخليك مطمن وانت بتتعالج عندنا</h2>
+    </div>
+    <div class="why-grid" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 6. الخدمات ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="nav.services">الخدمات</p>
+      <h2 data-i18n="services.title">كل اللي سنانك محتاجاه في مكان واحد</h2>
+      <p data-i18n="services.sub">اختار القسم وشوف الخدمات، ولما تدوس "احجز" الخدمة هتتحط في الفورم على طول.</p>
+    </div>
+    <div class="tabs reveal" id="serviceTabs" role="tablist"></div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 7. قبل وبعد ============ -->
+<section class="section dark-band" id="results">
+  <div class="wrap results-grid">
+    <div class="results-copy reveal">
+      <p class="eyebrow" data-i18n="nav.results">قبل وبعد</p>
+      <h2 data-i18n="results.title">النتيجة بتتكلم</h2>
+      <p data-i18n="results.sub">اسحب الخط في النص عشان تشوف الفرق.</p>
+      <div class="case-tabs" id="caseTabs" role="tablist"></div>
+      <p class="note" id="casesNote" hidden data-i18n="results.demo">الصور دي رسم توضيحي. حط صور حالاتكم الحقيقية في ملف البيانات.</p>
+    </div>
+    <div class="compare reveal" id="compare" style="--pos:50%">
+      <div class="compare-layer after" id="afterLayer"></div>
+      <div class="compare-layer before" id="beforeLayer"></div>
+      <span class="compare-label lb-before" data-i18n="results.before">قبل</span>
+      <span class="compare-label lb-after" data-i18n="results.after">بعد</span>
+      <div class="compare-handle" aria-hidden="true"><span></span></div>
+      <input class="compare-range" id="compareRange" type="range" min="0" max="100" value="50" aria-label="قبل وبعد">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. الدكاترة ============ -->
+<section class="section" id="doctors">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="nav.doctors">الدكاترة</p>
+      <h2 data-i18n="doctors.title">فريقنا الطبي</h2>
+      <p data-i18n="doctors.sub">فريق متكامل لكل ما يخص الأسنان. دوس على الدكتور عشان تحجز معاه.</p>
+    </div>
+    <div class="chips reveal" id="doctorFilters"></div>
+    <div class="doctors-grid" id="doctorsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ 9. آراء المرضى ============ -->
+<section class="section alt" id="reviews">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="reviews.eyebrow">آراء المرضى</p>
+      <h2 data-i18n="reviews.title">بيقولوا إيه عننا</h2>
+      <p class="note" id="reviewsNote" hidden data-i18n="reviews.sample">آراء تجريبية للعرض، هتتبدل بآراء مرضاكم الحقيقية.</p>
+    </div>
+    <div class="ask-review reveal" id="reviewsAsk">
+      <div class="ask-stars" aria-hidden="true">★★★★★</div>
+      <div class="ask-copy">
+        <h3 data-i18n="reviews.askTitle">اتعالجت عندنا؟ شاركنا رأيك</h3>
+        <p data-i18n="reviews.askText">رأيك بيساعدنا نتحسن، وبيساعد غيرك يختار صح.</p>
+      </div>
+      <div class="ask-actions">
+        <a class="btn btn-wa" id="reviewWa" target="_blank" rel="noopener" data-i18n="reviews.askWa">اكتب رأيك على واتساب</a>
+        <a class="btn btn-line" id="reviewFb" target="_blank" rel="noopener" data-i18n="reviews.askFb">قيّمنا على فيسبوك</a>
+      </div>
+    </div>
+    <div class="carousel reveal" id="reviews-carousel">
+      <div class="track" id="reviewsTrack"></div>
+      <div class="slider-ctrl center">
+        <button class="round-btn" id="revPrev" type="button" aria-label="السابق"><svg viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <div class="dots" id="revDots"></div>
+        <button class="round-btn" id="revNext" type="button" aria-label="التالي"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. الأسئلة الشائعة ============ -->
+<section class="section" id="faq">
+  <div class="wrap faq-grid">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="nav.faq">أسئلة شائعة</p>
+      <h2 data-i18n="faq.title">عندك سؤال؟</h2>
+      <p data-i18n="faq.sub">دي أكتر الأسئلة اللي بتوصلنا. لو سؤالك مش هنا، كلمنا على واتساب.</p>
+      <a class="btn btn-line" id="faqWa" target="_blank" rel="noopener" data-i18n="faq.ask">اسألنا على واتساب</a>
+    </div>
+    <div class="accordion" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============ 11. فورم الحجز ============ -->
+<section class="section alt" id="book">
+  <div class="wrap book-grid">
+    <div class="book-copy reveal">
+      <p class="eyebrow" data-i18n="book.eyebrow">احجز ميعادك</p>
+      <h2 data-i18n="book.title">اختار الخدمة والدكتور والميعاد</h2>
+      <p data-i18n="book.sub">المواعيد المتاحة بتظهر حسب اليوم اللي تختاره. بعد ما تكمّل، ابعت الحجز على واتساب وهنأكده معاك.</p>
+      <ol class="steps">
+        <li data-i18n="book.s1">اختار الخدمة</li>
+        <li data-i18n="book.s2">اختار الدكتور واليوم</li>
+        <li data-i18n="book.s3">اختار الساعة وابعت</li>
+      </ol>
+    </div>
+
+    <form class="book-form reveal" id="bookForm" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="fName" data-i18n="form.name">الاسم بالكامل</label>
+          <input id="fName" name="name" type="text" autocomplete="name">
+          <small class="err" data-for="fName"></small>
+        </div>
+        <div class="field">
+          <label for="fPhone" data-i18n="form.phone">رقم الموبايل</label>
+          <input id="fPhone" name="phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" placeholder="01xxxxxxxxx">
+          <small class="err" data-for="fPhone"></small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="fService" data-i18n="form.service">الخدمة</label>
+          <select id="fService" name="service"></select>
+          <small class="err" data-for="fService"></small>
+        </div>
+        <div class="field">
+          <label for="fDoctor" data-i18n="form.doctor">الدكتور</label>
+          <select id="fDoctor" name="doctor"></select>
+          <small class="err" data-for="fDoctor"></small>
+        </div>
+      </div>
+      <div class="field">
+        <label for="fDate" data-i18n="form.date">اليوم</label>
+        <input id="fDate" name="date" type="date">
+        <small class="err" data-for="fDate"></small>
+      </div>
+      <div class="field">
+        <span class="label" data-i18n="form.time">الساعة</span>
+        <div class="slots" id="slots" role="radiogroup"></div>
+        <small class="err" data-for="slots"></small>
+      </div>
+      <div class="field">
+        <label for="fNotes" data-i18n="form.notes">ملاحظات (اختياري)</label>
+        <textarea id="fNotes" name="notes" rows="3"></textarea>
+      </div>
+      <button class="btn btn-dark btn-block" type="submit" data-i18n="form.submit">كمّل الحجز</button>
+
+      <div class="confirm" id="confirm" hidden>
+        <h3 data-i18n="form.doneTitle">بيانات الحجز جاهزة</h3>
+        <dl id="summary"></dl>
+        <a class="btn btn-wa btn-block" id="sendWa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="wa-ic"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>
+          <span data-i18n="form.sendWa">ابعت الحجز على واتساب</span>
+        </a>
+        <button class="link-btn" type="button" id="editBooking" data-i18n="form.edit">عدّل البيانات</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ 12. تواصل معنا ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow" data-i18n="nav.contact">تواصل معنا</p>
+      <h2 data-i18n="contact.title">مستنيينك في رويال سمايل</h2>
+    </div>
+    <div class="contact-grid" id="contactGrid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="assets/images/mark-dark.png" alt="" width="30" height="40">
+      <div><b data-i18n="clinic.name">مركز رويال سمايل</b><small class="latin">ROYAL SMILE DENTAL CLINIC</small></div>
+    </div>
+    <div class="foot-social" id="social"></div>
+    <p class="copy">© <span id="year"></span> <span data-i18n="clinic.name">مركز رويال سمايل</span>. <span data-i18n="footer.rights">كل الحقوق محفوظة.</span></p>
+  </div>
+</footer>
+
+<!-- ============ 13. زرار واتساب + الرجوع لفوق ============ -->
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>
+  <span class="wa-tip" data-i18n="wa.tip">كلمنا على واتساب</span>
+</a>
+<button class="to-top" id="toTop" type="button" aria-label="لفوق"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
